@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sean/CLionProjects/DS_1/PlainBox.h
+iostream
+-
+memory
+-
+cstdint
+-
+cstring
+-
+
+/home/sean/CLionProjects/DS_1/ToyBox.h
+PlainBox.h
+/home/sean/CLionProjects/DS_1/PlainBox.h
+
+/home/sean/CLionProjects/DS_1/main.cpp
+iostream
+-
+ToyBox.h
+/home/sean/CLionProjects/DS_1/ToyBox.h
+

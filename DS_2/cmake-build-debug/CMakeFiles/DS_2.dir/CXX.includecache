@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sean/CLionProjects/DS_2/main.cpp
+iostream
+-
+recursive.h
+/home/sean/CLionProjects/DS_2/recursive.h
+
+/home/sean/CLionProjects/DS_2/recursive.h
+iostream
+-
+memory
+-
+vector
+-
+algorithm
+-
+
