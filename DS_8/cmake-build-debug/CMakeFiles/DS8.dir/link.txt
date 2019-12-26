@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/DS8.dir/main.cpp.o CMakeFiles/DS8.dir/list.cpp.o CMakeFiles/DS8.dir/linklist.cpp.o  -o DS8 

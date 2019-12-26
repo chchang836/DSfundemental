@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/DS_2.dir/main.cpp.o  -o DS_2 
