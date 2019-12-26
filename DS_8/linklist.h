@@ -7,38 +7,40 @@
 #ifndef DS8_LINKLIST_H
 #define DS8_LINKLIST_H
 
-template <typename Itemtype>
+template <typename ItemType>
 class Node{
 public:
     typedef std::shared_ptr<Node> Ptr;
+    typedef std::shared_ptr<Node<ItemType>> sharedPtr;
+
     Node(){};
 
     Node(const Node& node){ next = node;}
 
-    Node(const Itemtype& item){
+    Node(const ItemType& item){
         value = item;
     }
 
-    Node(const Itemtype& item, Node<Itemtype>* in_item){
+    Node(const ItemType& item, sharedPtr in_item){
         value = item;
         next = in_item;
     }
 
-    void setNext(Node<Itemtype>* in_item){
+    void setNext(sharedPtr in_item){
         next = in_item;
     }
 
-    Itemtype getItem() const{
+    ItemType getItem() const{
         return value;
     }
 
-    Node<Itemtype>* getNext() const{
+    sharedPtr getNext() const{
         return next;
     }
 
 private:
-    Itemtype value;
-    Node<Itemtype>* next;
+    ItemType value;
+    sharedPtr next;
 };
 
 template<class ItemType>
@@ -46,6 +48,7 @@ class Linklist : public ListInterface<ItemType>
 {
     public:
       typedef std::shared_ptr<Linklist> Ptr;
+      typedef std::shared_ptr<Node<ItemType>> sharedPtr;
 
       Linklist();
 
@@ -68,10 +71,12 @@ class Linklist : public ListInterface<ItemType>
       };
 
     private:
-      Node<ItemType>* headPtr;
-      Node<ItemType>* getNodeAt(int position) const;
+
+      sharedPtr headPtr;
+
+      sharedPtr getNodeAt(int position) const;
+
       int itemCount;
       int maxItems;
-
 };
 #endif //DS8_LINKLIST_H
